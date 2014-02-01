@@ -11,7 +11,13 @@ module.exports = (grunt) ->
 
       src: 'lib/**/*.js'
 
-      test: 'test/**/*.js'
+      test:
+        options:
+          globals:
+            describe: true
+            it: true
+            
+        files: 'test/**/*.js'
 
     mochaTest:
       options:
