@@ -27,5 +27,8 @@
     "grunt-contrib-jshint": "~0.8.0",
     "load-grunt-tasks": "~0.3.0",
     "chai": "~1.9.0"
+  },
+  "dependencies": {
+    "lodash": "~2.4.1"
   }
 }

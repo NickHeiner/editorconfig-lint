@@ -16,7 +16,11 @@ describe('editorconfig-lint', function () {
         });
 
         it('detects non-compliant indentation', function() {
-            expect(editorconfigLint('\tvar x = 3;', {indent_style: 'space'})).to.deep.equal({});
+            expect(editorconfigLint('\tvar x = 3;', {indent_style: 'space'})).to.deep.equal({
+                indent_style: [
+                    {line: 0, character: 0}
+                ]
+            });
         });
 
     });
