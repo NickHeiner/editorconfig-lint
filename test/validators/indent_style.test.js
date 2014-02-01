@@ -1,7 +1,7 @@
 'use strict';
 
 var expect = require('chai').expect,
-    editorconfigLint = require('../lib/editorconfig-lint');
+    editorconfigLint = require('../../lib/editorconfig-lint');
 
 describe('editorconfig-lint', function () {
 
