@@ -38,6 +38,21 @@ describe('editorconfig-lint', function() {
 
         describe('= double', function() {
 
+            it('detects non-compliant quotes', function() {
+                var codeStr = "var x = 'bad quotes';";
+                expect(editorconfigLint(codeStr, {quote_type: 'double'})).to.deep.equal({
+                    quote_type: [
+                        {
+                            line: 0,
+                            col: codeStr.indexOf("'")
+                        },
+                        {
+                            line: 0,
+                            col: _.lastIndexOf(codeStr, "'")
+                        }
+                    ]
+                });
+            });
         });
 
     });
