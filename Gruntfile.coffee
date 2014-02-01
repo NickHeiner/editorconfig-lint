@@ -16,7 +16,7 @@ module.exports = (grunt) ->
           globals:
             describe: true
             it: true
-            
+
         files: 'test/**/*.js'
 
     mochaTest:
