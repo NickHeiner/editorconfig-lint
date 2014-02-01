@@ -19,5 +19,12 @@
   "bugs": {
     "url": "https://github.com/NickHeiner/editorconfig-lint/issues"
   },
-  "homepage": "https://github.com/NickHeiner/editorconfig-lint"
+  "homepage": "https://github.com/NickHeiner/editorconfig-lint",
+  "devDependencies": {
+    "grunt-notify": "~0.2.17",
+    "grunt-mocha-test": "~0.9.0",
+    "grunt": "~0.4.2",
+    "grunt-contrib-jshint": "~0.8.0",
+    "load-grunt-tasks": "~0.3.0"
+  }
 }
