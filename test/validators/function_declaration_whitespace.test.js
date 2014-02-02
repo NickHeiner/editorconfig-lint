@@ -30,6 +30,18 @@ describe('editorconfig-lint', function() {
                 });
             });
 
+            it('detects a non-compliant function definition with an anonymous function', function() {
+                var codeStr = 'var f = function () { }';
+                expect(editorconfigLint(codeStr, {function_declaration_whitespace: 'none'})).to.deep.equal({
+                    function_declaration_whitespace: [
+                        {
+                            line: 0,
+                            col: codeStr.indexOf('(') - 1
+                        }
+                    ]
+                });
+            });
+
         });
 
         describe('= single', function() {
