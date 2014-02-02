@@ -58,6 +58,10 @@ describe('editorconfig-lint', function() {
                 });
             });
 
+            it('returns an empty object when there are no function definitions', function() {
+                expect(editorconfigLint('    var x = 3;', {function_declaration_whitespace: 'single'})).to.deep.equal({});
+            });
+
         });
 
     });
