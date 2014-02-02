@@ -1,0 +1,37 @@
+{
+  "name": "editorconfig-lint",
+  "version": "0.1.0",
+  "description": "Lint code for compliance with an editorconfig",
+  "main": "lib/editorconfig-lint.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NickHeiner/editorconfig-lint"
+  },
+  "keywords": [
+    "lint",
+    "editorconfig"
+  ],
+  "author": "Nick Heiner <nth23@cornell.edu>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NickHeiner/editorconfig-lint/issues"
+  },
+  "homepage": "https://github.com/NickHeiner/editorconfig-lint",
+  "devDependencies": {
+    "grunt-mocha-test": "~0.9.0",
+    "grunt": "~0.4.2",
+    "grunt-contrib-jshint": "~0.8.0",
+    "load-grunt-tasks": "~0.3.0",
+    "chai": "~1.9.0"
+  },
+  "dependencies": {
+    "lodash": "~2.4.1",
+    "underscore.string": "~2.3.3",
+    "esprima": "~1.0.4",
+    "globule": "~0.2.0",
+    "traverse": "~0.6.6"
+  }
+}
