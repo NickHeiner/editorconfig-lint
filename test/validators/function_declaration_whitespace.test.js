@@ -62,6 +62,11 @@ describe('editorconfig-lint', function() {
                 expect(editorconfigLint('    var x = 3;', {function_declaration_whitespace: 'single'})).to.deep.equal({});
             });
 
+            it('detects an error when there is more than one space', function() {
+                expect(editorconfigLint('function foo            () {}', {function_declaration_whitespace: 'single'}))
+                    .to.deep.equal({});
+            });
+
         });
 
     });
