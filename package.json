@@ -29,6 +29,9 @@
   },
   "dependencies": {
     "lodash": "~2.4.1",
-    "underscore.string": "~2.3.3"
+    "underscore.string": "~2.3.3",
+    "esprima": "~1.0.4",
+    "globule": "~0.2.0",
+    "traverse": "~0.6.6"
   }
 }
