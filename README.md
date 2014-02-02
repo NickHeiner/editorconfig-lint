@@ -10,4 +10,3 @@ Lint code for compliance with an editorconfig
 * More validations
 ** Using one var statement or many
 ** `{foo: bar}` or `{ foo: bar }`
-** Line length
