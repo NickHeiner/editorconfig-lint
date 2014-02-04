@@ -11,16 +11,16 @@ describe('editorconfig-lint', function() {
         describe('= single', function() {
 
             it('returns an empty object when there are compliant quotes', function() {
-                expect(editorconfigLint("    var x = 'hello world';", {quote_type: 'single'})).to.deep.equal({});
+                expect(editorconfigLint({quote_type: 'single'}, "    var x = 'hello world';")).to.deep.equal({});
             });
 
             it('returns an empty object when there are no quotes', function() {
-                expect(editorconfigLint('    var x = 3;', {quote_type: 'single'})).to.deep.equal({});
+                expect(editorconfigLint({quote_type: 'single'}, '    var x = 3;')).to.deep.equal({});
             });
 
             it('detects non-compliant quotes', function() {
                 var codeStr = 'var x = "bad quotes";';
-                expect(editorconfigLint(codeStr, {quote_type: 'single'})).to.deep.equal({
+                expect(editorconfigLint({quote_type: 'single'}, codeStr)).to.deep.equal({
                     quote_type: [
                         {
                             line: 0,
@@ -40,7 +40,7 @@ describe('editorconfig-lint', function() {
 
             it('detects non-compliant quotes', function() {
                 var codeStr = "var x = 'bad quotes';";
-                expect(editorconfigLint(codeStr, {quote_type: 'double'})).to.deep.equal({
+                expect(editorconfigLint({quote_type: 'double'}, codeStr)).to.deep.equal({
                     quote_type: [
                         {
                             line: 0,
