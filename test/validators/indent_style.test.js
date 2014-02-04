@@ -20,7 +20,7 @@ describe('editorconfig-lint', function () {
             it('detects non-compliant indentation', function() {
                 expect(editorconfigLint({indent_style: 'space'}, '\tvar x = 3;')).to.deep.equal({
                     indent_style: [
-                        {line: 0, col: 0}
+                        {lineNumber: 0, col: 0}
                     ]
                 });
             });
@@ -34,10 +34,10 @@ describe('editorconfig-lint', function () {
             it('detects non-compliant indentation', function() {
                 expect(editorconfigLint({indent_style: 'tab'}, '    var x = 3;')).to.deep.equal({
                     indent_style: [
-                        {line: 0, col: 0},
-                        {line: 0, col: 1},
-                        {line: 0, col: 2},
-                        {line: 0, col: 3},
+                        {lineNumber: 0, col: 0},
+                        {lineNumber: 0, col: 1},
+                        {lineNumber: 0, col: 2},
+                        {lineNumber: 0, col: 3},
                     ]
                 });
             });

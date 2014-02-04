@@ -23,7 +23,7 @@ describe('editorconfig-lint', function() {
                 expect(editorconfigLint({function_declaration_whitespace: 'none'}, codeStr)).to.deep.equal({
                     function_declaration_whitespace: [
                         {
-                            line: 0,
+                            lineNumber: 0,
                             col: codeStr.indexOf('(') - 1
                         }
                     ]
@@ -35,7 +35,7 @@ describe('editorconfig-lint', function() {
                 expect(editorconfigLint({function_declaration_whitespace: 'none'}, codeStr)).to.deep.equal({
                     function_declaration_whitespace: [
                         {
-                            line: 0,
+                            lineNumber: 0,
                             col: codeStr.indexOf('(') - 1
                         }
                     ]
@@ -51,7 +51,7 @@ describe('editorconfig-lint', function() {
                 expect(editorconfigLint({function_declaration_whitespace: 'single'}, codeStr)).to.deep.equal({
                     function_declaration_whitespace: [
                         {
-                            line: 0,
+                            lineNumber: 0,
                             col: codeStr.indexOf('(')
                         }
                     ]

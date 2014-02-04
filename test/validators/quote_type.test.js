@@ -23,11 +23,11 @@ describe('editorconfig-lint', function() {
                 expect(editorconfigLint({quote_type: 'single'}, codeStr)).to.deep.equal({
                     quote_type: [
                         {
-                            line: 0,
+                            lineNumber: 0,
                             col: codeStr.indexOf('"')
                         },
                         {
-                            line: 0,
+                            lineNumber: 0,
                             col: _.lastIndexOf(codeStr, '"')
                         }
                     ]
@@ -43,11 +43,11 @@ describe('editorconfig-lint', function() {
                 expect(editorconfigLint({quote_type: 'double'}, codeStr)).to.deep.equal({
                     quote_type: [
                         {
-                            line: 0,
+                            lineNumber: 0,
                             col: codeStr.indexOf("'")
                         },
                         {
-                            line: 0,
+                            lineNumber: 0,
                             col: _.lastIndexOf(codeStr, "'")
                         }
                     ]

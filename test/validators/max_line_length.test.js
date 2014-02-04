@@ -16,7 +16,7 @@ describe('editorconfig-lint', function () {
             expect(editorconfigLint({max_line_length: 6}, '    var x = 3;')).to.deep.equal({
                 max_line_length: [
                     {
-                        line: 0,
+                        lineNumber: 0,
                         col: 7
                     }
                 ]
