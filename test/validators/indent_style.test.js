@@ -18,9 +18,10 @@ describe('editorconfig-lint', function () {
             });
 
             it('detects non-compliant indentation', function() {
-                expect(editorconfigLint({indent_style: 'space'}, '\tvar x = 3;')).to.deep.equal({
+                var codeStr = '\tvar x = 3;';
+                expect(editorconfigLint({indent_style: 'space'}, codeStr)).to.deep.equal({
                     indent_style: [
-                        {lineNumber: 0, col: 0}
+                        {lineNumber: 0, col: 0, line: codeStr}
                     ]
                 });
             });
@@ -32,12 +33,13 @@ describe('editorconfig-lint', function () {
             });
 
             it('detects non-compliant indentation', function() {
-                expect(editorconfigLint({indent_style: 'tab'}, '    var x = 3;')).to.deep.equal({
+                var codeStr = '    var x = 3;';
+                expect(editorconfigLint({indent_style: 'tab'}, codeStr)).to.deep.equal({
                     indent_style: [
-                        {lineNumber: 0, col: 0},
-                        {lineNumber: 0, col: 1},
-                        {lineNumber: 0, col: 2},
-                        {lineNumber: 0, col: 3},
+                        {lineNumber: 0, col: 0, line: codeStr},
+                        {lineNumber: 0, col: 1, line: codeStr},
+                        {lineNumber: 0, col: 2, line: codeStr},
+                        {lineNumber: 0, col: 3, line: codeStr},
                     ]
                 });
             });

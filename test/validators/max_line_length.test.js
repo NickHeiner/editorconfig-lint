@@ -13,11 +13,13 @@ describe('editorconfig-lint', function () {
         });
 
         it('detects a line that is too long', function () {
-            expect(editorconfigLint({max_line_length: 6}, '    var x = 3;')).to.deep.equal({
+            var codeStr = '    var x = 3;';
+            expect(editorconfigLint({max_line_length: 6}, codeStr)).to.deep.equal({
                 max_line_length: [
                     {
                         lineNumber: 0,
-                        col: 7
+                        col: 7,
+                        line: codeStr
                     }
                 ]
             });

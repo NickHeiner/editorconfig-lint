@@ -24,7 +24,8 @@ describe('editorconfig-lint', function() {
                     function_declaration_whitespace: [
                         {
                             lineNumber: 0,
-                            col: codeStr.indexOf('(') - 1
+                            col: codeStr.indexOf('(') - 1,
+                            line: codeStr
                         }
                     ]
                 });
@@ -36,7 +37,8 @@ describe('editorconfig-lint', function() {
                     function_declaration_whitespace: [
                         {
                             lineNumber: 0,
-                            col: codeStr.indexOf('(') - 1
+                            col: codeStr.indexOf('(') - 1,
+                            line: codeStr
                         }
                     ]
                 });
@@ -52,7 +54,8 @@ describe('editorconfig-lint', function() {
                     function_declaration_whitespace: [
                         {
                             lineNumber: 0,
-                            col: codeStr.indexOf('(')
+                            col: codeStr.indexOf('('),
+                            line: codeStr
                         }
                     ]
                 });

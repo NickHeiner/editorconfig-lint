@@ -24,11 +24,13 @@ describe('editorconfig-lint', function() {
                     quote_type: [
                         {
                             lineNumber: 0,
-                            col: codeStr.indexOf('"')
+                            col: codeStr.indexOf('"'),
+                            line: codeStr
                         },
                         {
                             lineNumber: 0,
-                            col: _.lastIndexOf(codeStr, '"')
+                            col: _.lastIndexOf(codeStr, '"'),
+                            line: codeStr
                         }
                     ]
                 });
@@ -44,11 +46,13 @@ describe('editorconfig-lint', function() {
                     quote_type: [
                         {
                             lineNumber: 0,
-                            col: codeStr.indexOf("'")
+                            col: codeStr.indexOf("'"),
+                            line: codeStr
                         },
                         {
                             lineNumber: 0,
-                            col: _.lastIndexOf(codeStr, "'")
+                            col: _.lastIndexOf(codeStr, "'"),
+                            line: codeStr
                         }
                     ]
                 });
