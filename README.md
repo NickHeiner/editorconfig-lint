@@ -1,3 +1,6 @@
+# deprecated: just use [jscs](https://github.com/jscs-dev/node-jscs) instead.
+I originally created this as a way to ensure that my js fits a certain style, but I found jscs to be more mature and met my needs just as well.
+
 editorconfig-lint
 =================
 
